@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: "Poppins", sans-serif;
+}
+body {
+    @apply bg-[#00040F] text-[#CEB7FF];
+}
+::-webkit-calendar-picker-indicator {
+    @apply bg-orange-200 p-[5px] cursor-pointer rounded-[10px];
+}
+@layer components {
+    .inputMain {
+        @apply p-[15px] rounded-[10px] border border-[#CEB7FF] bg-[#00040F] placeholder-[#CEB7FF] focus:outline-none;
+    }
+    .space-main {
+        @apply p-[30px];
+    }
+    .space-desktop {
+        @apply p-[100px];
+    }
+    .box-shadow-main {
+        box-shadow: 0 0 10px 0 #ceb7ff, 0 0 5px 0 #ceb7ff;
+    }
+    .text-shadow-main {
+        text-shadow: 0 0 50px #ceb7ff, 0 0 40px #ceb7ff, 0 0 30px #ceb7ff;
+    }
+    .text-stroke {
+        -webkit-text-stroke: 1px #ceb7ff;
+    }
+    .btn-main {
+        @apply w-full border border-[#CEB7FF] py-[15px] font-bold text-[20px] rounded-[20px] hover:bg-[#CEB7FF] hover:text-[#00040F];
+    }
+    .icon-main {
+        @apply w-[40px] h-[40px] text-gray-400 hover:text-white cursor-pointer;
+    }
+    .icon-active {
+        @apply w-[40px] h-[40px] text-white cursor-pointer;
+    }
+    .rotate-animation {
+        animation-name: rotate-animation;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+    }
+    @keyframes rotate-animation {
+        0% {
+            rotate: 0deg;
+        }
+        100% {
+            rotate: 360deg;
+        }
+    }
+}
